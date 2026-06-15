@@ -1,0 +1,17 @@
+# SubmittalTracker cloud watcher — background worker, no HTTP service.
+# NOTE: "app" must be globally unique on Fly.io — change it to your own name
+# before deploying (e.g. submittaltracker-yourcompany).
+app = "submittaltracker"
+primary_region = "ewr"
+
+[build]
+
+[env]
+  POLL_SECONDS = "30"
+  SUBMITTAL_TPM_BUDGET = "9000"
+  # The Dropbox path to your "Submittal Tracker" folder.
+  DBX_BASE = "/Your Dropbox Folder/Submittal Tracker"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"

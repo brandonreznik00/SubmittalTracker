@@ -1,0 +1,6 @@
+{
+  "watch_folder": "C:\\Users\\YOUR_USERNAME\\YOUR_DROPBOX_FOLDER\\Submittal Tracker\\Submittals Inbox",
+  "log_xlsx": "C:\\Users\\YOUR_USERNAME\\YOUR_DROPBOX_FOLDER\\Submittal Tracker\\Submittal_Log.xlsx",
+  "activity_log": "C:\\Users\\YOUR_USERNAME\\YOUR_DROPBOX_FOLDER\\Submittal Tracker\\Submittal_Log.log",
+  "poll_seconds": 5
+}

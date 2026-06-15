@@ -1,0 +1,40 @@
+SUBMITTAL TRACKER — HOW TO RUN (local PC mode)
+==============================================
+
+WHAT IT DOES
+  Watches a SHARED Dropbox folder:
+      <Your Dropbox> > Submittal Tracker > Submittals Inbox
+  Any project manager drops a submittal PDF there (from their own
+  computer — they just need the shared Dropbox folder, nothing installed).
+  The AI reads it and adds a row to the shared log:
+      <Your Dropbox> > Submittal Tracker > Submittal_Log.xlsx
+  Each submittal lands on the SHEET FOR ITS PROJECT (read from the PDF
+  or filename). New projects get a new sheet automatically.
+
+  (For an always-on version that needs no PC, see the "Cloud (Fly.io)"
+  section of README.md.)
+
+THIS MACHINE IS THE ENGINE (local mode)
+  The watcher runs on whatever PC you start it on. If that PC is off or
+  the watcher isn't running, drops just queue up in the inbox — they're
+  processed the next time it starts (nothing is lost).
+
+FIRST-TIME SETUP
+  1. Copy config.example.json to config.json and edit the folder paths.
+  2. Set your Anthropic API key:
+       setx ANTHROPIC_API_KEY "sk-ant-..."
+     then open a NEW PowerShell window.
+
+START IT
+  1. Open PowerShell
+  2. cd into this project folder
+  3. .\run.ps1
+  Keep the window open (minimize is fine).
+
+CHANGE FOLDERS
+  Edit config.json in this folder (watch_folder / log_xlsx paths).
+
+FOR THE OTHER PMs
+  Drop a PDF into the Submittals Inbox folder — that's the only step.
+  Tip: put the project name in the filename if the PDF doesn't show it,
+  and don't keep the log open in Excel while it's being written.
